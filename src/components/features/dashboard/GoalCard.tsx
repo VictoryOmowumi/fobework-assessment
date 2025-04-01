@@ -1,4 +1,3 @@
-';
 
 interface GoalCardProps {
   title: string;

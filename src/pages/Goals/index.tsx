@@ -1,7 +1,6 @@
-';
 
 const Goals = () => {
-  // Enhanced dummy data with icons and status
+ 
   const goals = [
     { 
       id: 1, 

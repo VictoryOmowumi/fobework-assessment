@@ -1,4 +1,4 @@
-';
+
 import TransactionItem from './TransactionItem';
 import { useTransactions } from '../../../services/transactionApi/api';
 
