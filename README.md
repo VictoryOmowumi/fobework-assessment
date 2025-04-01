@@ -3,7 +3,7 @@
 FinPal is a responsive fintech dashboard that helps users manage their finances, track savings goals, monitor investments, and simulate transactions. Built using **React**, **Redux Toolkit**, **Formik**, **Yup**, and **shadcn/ui**.
 
 ## 🚀 Live Demo
-🔗 [https://fobework-assessment-e43p2vzet-victoryomowumis-projects.vercel.app/]
+🔗 [[https://fobework-assessment-e43p2vzet-victoryomowumis-projects.vercel.app/](https://fobework-assessment.vercel.app/)]
 
 ---
 ## 📸 Preview
