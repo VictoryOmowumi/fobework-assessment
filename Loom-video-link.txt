@@ -1,6 +1,6 @@
 📹 Loom Walkthrough – FinPal Dashboard
 
-https://www.loom.com/share/your-loom-id
+https://www.loom.com/share/64b05b1b0df14f958946704d2a6dc278?sid=1b0fec2d-52dd-4c89-881e-210c9313c6a1
 
 Video Highlights:
 - Dashboard structure and components
