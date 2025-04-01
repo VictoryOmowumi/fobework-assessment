@@ -1,0 +1,10 @@
+📹 Loom Walkthrough – FinPal Dashboard
+
+https://www.loom.com/share/your-loom-id
+
+Video Highlights:
+- Dashboard structure and components
+- Responsiveness demo (mobile/tablet/desktop)
+- Sending and receiving funds via modals
+- State management with Redux Toolkit
+- Visual polish, error handling, and loading states

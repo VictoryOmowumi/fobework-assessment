@@ -161,7 +161,7 @@ const TransactionStats = ({
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-slate-800 dark:text-slate-200 print:hidden mb-6">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 text-slate-800 dark:text-slate-200 print:hidden mb-6">
       {/* Left Column - Balance and Summary Cards */}
       <div className="col-span-1 flex flex-col gap-4 h-full">
         {/* Current Balance Card */}

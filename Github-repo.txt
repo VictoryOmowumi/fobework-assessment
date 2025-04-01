@@ -1,0 +1,9 @@
+🔗 GitHub Repository – FinPal Dashboard
+
+https://github.com/VictoryOmowumi/fobework-assessment
+
+This contains:
+- Source code (React + TypeScript)
+- All documentation (`README.md`)
+- Folder structure for components, state, and API
+- Instructions to clone and run the app locally

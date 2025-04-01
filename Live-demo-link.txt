@@ -1,0 +1,9 @@
+🌐 Live Demo – FinPal Dashboard
+
+https://fobework-assessment.vercel.app/
+
+Features available:
+- Dashboard with balance overview, KPIs, and charts
+- Send / Receive funds modals
+- Savings goals and recent transactions
+- Fully responsive layout (mobile, tablet, desktop)
