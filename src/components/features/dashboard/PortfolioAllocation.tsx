@@ -1,4 +1,4 @@
-import React from 'react';
+';
 import PortfolioChart from './PortfolioChart';
 import { TrendingUp } from 'lucide-react';
 interface PortfolioProps {

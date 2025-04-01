@@ -1,4 +1,4 @@
-import React from 'react';
+';
 import SummaryCards from '../../components/features/dashboard/SummaryCards';
 import PortfolioAllocation from '../../components/features/dashboard/PortfolioAllocation';
 import RecentTransactions from '../../components/features/dashboard/RecentTransactions';

@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   DataGrid, GridToolbarQuickFilter,
   GridToolbarFilterButton,
@@ -8,8 +7,30 @@ import {
   GridToolbarContainer
 
 } from '@mui/x-data-grid'
-import { getStatusClasses } from '@/utils/format';
-const columns = [
+import { getStatusClasses } from '../../../utils/format';
+interface Transaction {
+  id: string;
+  amount: number;
+  currency: string;
+  status: string;
+  transactionType: string;
+  recipient: {
+    name: string;
+    accountNumber: string;
+  };
+  paymentMethod: string;
+  transactionDate: string;
+  category: string;
+}
+
+interface Column {
+  field: string;
+  headerName: string;
+  flex: number;
+  renderCell?: (params: { row: Transaction }) => React.ReactNode;
+}
+
+const columns: Column[] = [
   { field: 'id', headerName: 'ID', flex: 1 },
   { field: 'amount', headerName: 'Amount', flex: 1 },
   { field: 'currency', headerName: 'Currency', flex: 1 },
@@ -18,11 +39,10 @@ const columns = [
     renderCell: (params) => {
       const status = params.row.status;
       return (
-        <div >
+        <div>
           <span className={`px-2 py-1 rounded-full text-xs ${getStatusClasses(status)}`}>
             {status}
           </span>
-
         </div>
       );
     }
@@ -37,7 +57,6 @@ const columns = [
       return (
         <div>
           <p className='capitalize'>{recipient.name} - {recipient.accountNumber}</p>
-
         </div>
       );
     }
@@ -85,18 +104,15 @@ function CustomToolbar() {
 }
 
 
-const TransactionList = ({ transactions, loading = false }) => {
+const TransactionList: React.FC<{ transactions: Transaction[]; loading?: boolean }> = ({ transactions, loading = false }) => {
   return (
     <div style={{ height: 600, width: '100%' }}>
       <DataGrid
         rows={transactions}
         columns={columns}
         loading={loading}
-        pageSize={10}
-        pageSizeOptions={[5, 10, 20]}
-
         getRowId={(row) => row.id}
-        disableSelectionOnClick
+        
         slots={{
           toolbar: CustomToolbar,
         }}

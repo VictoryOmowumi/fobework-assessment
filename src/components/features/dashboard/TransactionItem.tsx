@@ -1,4 +1,4 @@
-import React from 'react';
+';
 import {  FiArrowUpRight, FiArrowDownLeft } from 'react-icons/fi';
 import { format } from 'date-fns';
 

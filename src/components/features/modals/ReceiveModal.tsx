@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Dialog,
   DialogContent,
@@ -11,7 +10,7 @@ import { FiCopy } from "react-icons/fi";
 import { toast, Toaster } from "sonner";
 const ReceiveModal = () => {
   const dispatch = useAppDispatch();
-  const open = useAppSelector((state) => state.finance.receiveModalOpen);
+  const open = useAppSelector((state: { finance: { receiveModalOpen: boolean } }) => state.finance.receiveModalOpen) as boolean;
 
   const handleCopy = (text: string) => {
     navigator.clipboard.writeText(text).then(() => {

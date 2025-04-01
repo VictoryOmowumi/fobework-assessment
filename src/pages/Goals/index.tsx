@@ -1,4 +1,4 @@
-import React from 'react';
+';
 
 const Goals = () => {
   // Enhanced dummy data with icons and status

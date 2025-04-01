@@ -1,21 +1,20 @@
-import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
   HomeIcon,
   BanknotesIcon,
   ArrowsRightLeftIcon,
   ChartBarIcon,
-  Cog6ToothIcon,
+  TrophyIcon
 } from '@heroicons/react/24/outline';
 
 const MobileNav = () => {
   const location = useLocation();
   const navItems = [
     { name: 'Dashboard', path: '/', icon: HomeIcon },
-    { name: 'Accounts', path: '/accounts', icon: BanknotesIcon },
     { name: 'Transactions', path: '/transactions', icon: ArrowsRightLeftIcon },
+    { name: 'Accounts', path: '/accounts', icon: BanknotesIcon },
     { name: 'Investments', path: '/investments', icon: ChartBarIcon },
-    { name: 'Settings', path: '/settings', icon: Cog6ToothIcon },
+    { name: 'Goals', path: '/goals', icon: TrophyIcon },
   ];
 
   return (

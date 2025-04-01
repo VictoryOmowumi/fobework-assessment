@@ -1,9 +1,8 @@
-import React from "react";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
-} from "@/components/ui/dialog";
+} from "../../ui/dialog";
 import { useAppDispatch, useAppSelector } from "../../../store/store";
 import { toggleSendModal } from "../../../store/financeSlice";
 import { useFormik } from "formik";
@@ -18,12 +17,12 @@ import {
   SelectValue,
   SelectContent,
   SelectItem,
-} from "@/components/ui/select";
+} from "../../ui/select";
 import { toast, Toaster } from "sonner";
 
 const SendModal = () => {
   const dispatch = useAppDispatch();
-  const open = useAppSelector((state) => state.finance.sendModalOpen);
+  const open = useAppSelector((state) => state.finance.sendModalOpen) as boolean;
 
   const formik = useFormik({
     initialValues: {
@@ -149,7 +148,6 @@ const SendModal = () => {
             <Select
               value={formik.values.category}
               onValueChange={(value) => formik.setFieldValue("category", value)}
-               className="w-full"
             >
               <SelectTrigger>
                 <SelectValue placeholder="Select a category" />
