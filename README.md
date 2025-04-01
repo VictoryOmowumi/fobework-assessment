@@ -5,6 +5,9 @@ FinPal is a responsive fintech dashboard that helps users manage their finances,
 ## 🚀 Live Demo
 🔗 [[https://fobework-assessment-e43p2vzet-victoryomowumis-projects.vercel.app/](https://fobework-assessment.vercel.app/)]
 
+## 🎥 Loom Link
+🔗 [https://www.loom.com/share/64b05b1b0df14f958946704d2a6dc278?sid=1b0fec2d-52dd-4c89-881e-210c9313c6a1]
+
 ---
 ## 📸 Preview
 
