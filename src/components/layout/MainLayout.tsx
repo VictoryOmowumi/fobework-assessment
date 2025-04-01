@@ -1,8 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
-import { Outlet } from "react-router-dom";
-import Breadcrumbs from "./Breadcrumbs";
 import MobileNav from "./MobileNav";
 
 

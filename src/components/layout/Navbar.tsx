@@ -1,4 +1,3 @@
-import React from "react";
 import { Bars3BottomLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { MoonIcon, SunIcon, BellIcon, ArrowsPointingOutIcon, ArrowsPointingInIcon, MagnifyingGlassIcon  } from "@heroicons/react/24/outline";
 import { useTheme } from "next-themes";

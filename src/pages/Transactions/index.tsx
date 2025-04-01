@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import TransactionList from '../../components/features/transactions/TransactionList';
 import TransactionStats from '../../components/features/transactions/TransactionStats';
 import { transactions as dummyTransactions } from '../../utils/dummydata';
@@ -17,8 +17,13 @@ const Transactions = () => {
     transactionDate: string;
     status: string;
     category: string;
+    amount: number;
+    currency: string;
+    transactionType: string;
+    paymentMethod: string;
     recipient: {
       name: string;
+      accountNumber: string;
     };
   }
 
@@ -33,6 +38,7 @@ const Transactions = () => {
       category: string;
       recipient: {
       name: string;
+      accountNumber: string;
       };
     }
 
@@ -88,7 +94,7 @@ const Transactions = () => {
     });
 
     setFilteredTransactions(filtered);
-  }, [filters, dummyTransactions]);
+  }, [filters]);
 
   const handleRefresh = async () => {
     setLoading(true);

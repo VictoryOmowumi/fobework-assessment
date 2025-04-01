@@ -7,7 +7,7 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-import { TrendingUp } from "lucide-react";
+
 interface PortfolioData {
   label: string;
   value: number;
