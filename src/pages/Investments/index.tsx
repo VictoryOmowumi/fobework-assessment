@@ -54,7 +54,7 @@ const Investments = () => {
 
       <div className="grid gap-6 grid-cols-1  md:grid-cols-3 mb-8">
         <div className="bg-card rounded-lg shadow p-6 col-span-2">
-          <div className="flex justify-between items-center mb-6">
+          <div className="flex flex-wrap justify-between items-center mb-6">
             <h2 className="text-xl font-semibold text-muted-foreground">
               Portfolio Allocation
             </h2>
@@ -69,7 +69,7 @@ const Investments = () => {
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Chart Container - Left Side */}
             <div className="flex-1 min-h-[300px] flex items-center justify-center w-full">
-              <ResponsiveContainer width="100%" height="100%">
+              <ResponsiveContainer width="100%" height={300}>
                 <PieChart>
                   <Pie
                     data={portfolio.allocation}
@@ -77,8 +77,8 @@ const Investments = () => {
                     nameKey="name"
                     cx="50%"
                     cy="50%"
-                    outerRadius={120}
-                    innerRadius={60}
+                    outerRadius="80%"
+                    innerRadius="50%"
                     paddingAngle={2}
                     label={({ name, percent }) =>
                       `${name} ${(percent * 100).toFixed(0)}%`
@@ -163,13 +163,17 @@ const Investments = () => {
               {/* Performance summary */}
               <div className="mt-8 p-4 bg-accent rounded-lg">
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-muted-foreground">Today's Change</span>
+                  <span className="text-sm text-muted-foreground">
+                    Today's Change
+                  </span>
                   <span className="font-medium text-green-500">
                     +$245 (0.55%)
                   </span>
                 </div>
                 <div className="flex justify-between items-center mt-2">
-                  <span className="text-sm text-muted-foreground">YTD Return</span>
+                  <span className="text-sm text-muted-foreground">
+                    YTD Return
+                  </span>
                   <span className="font-medium text-green-500">+8.2%</span>
                 </div>
               </div>
@@ -188,7 +192,9 @@ const Investments = () => {
             </div>
             <div>
               <p className="text-gray-500 text-sm mb-1">Today's Change</p>
-              <p className="text-lg font-medium text-green-500">+$245 (0.55%)</p>
+              <p className="text-lg font-medium text-green-500">
+                +$245 (0.55%)
+              </p>
             </div>
             <div>
               <p className="text-gray-500 text-sm mb-1">YTD Return</p>
