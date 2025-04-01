@@ -42,7 +42,6 @@ const MainLayout = ({ children }: { children?: React.ReactNode }) => {
           />
 
           <main className="flex-1 overflow-y-auto p-4 md:px-6 md:py-4">
-              {/* <Breadcrumbs /> */}
             <div className="max-w-7xl mx-auto">
              {children}
             </div>

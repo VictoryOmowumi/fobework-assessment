@@ -1,6 +1,7 @@
-import React from 'react';
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
-import { TrendingUp } from 'lucide-react';
+
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip} from 'recharts';
+
+
 const Investments = () => {
   // Dummy data
   const portfolio = {

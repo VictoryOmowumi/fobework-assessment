@@ -1,4 +1,3 @@
-import React, {useState} from 'react';
 import { Plus } from 'lucide-react';
 import TransactionList from '../../components/features/transactions/TransactionList';
 import { transactions as dummyTransactions } from '../../utils/dummydata';
@@ -34,7 +33,7 @@ const Accounts = () => {
     },
   ];
 
-    const [loading, setLoading] = useState(false);
+    const loading = false; 
 
   return (
     <div className="space-y-6">
