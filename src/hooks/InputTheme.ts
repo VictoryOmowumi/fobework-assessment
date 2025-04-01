@@ -25,9 +25,7 @@ const darkTheme = createTheme({
       default: '#2e2d32',
       paper: '#121212',
     },
-    exportButton: {
-      main: '#ffffff', 
-    },
+   
   },
 });
 
