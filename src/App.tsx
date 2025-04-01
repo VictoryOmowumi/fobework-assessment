@@ -1,6 +1,7 @@
 import {lazy, Suspense} from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import MainLayout from './components/layout/MainLayout'
+import Loader from './components/layout/Loader'
 
 const Dashboard = lazy(() => import('./pages/Dashboard'))
 const Accounts = lazy(() => import('./pages/Accounts'))
@@ -13,7 +14,8 @@ const App = () => {
   return (
     <Router>
       <MainLayout>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loader />}>
+          {/* Main Routes */}
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/accounts" element={<Accounts />} />

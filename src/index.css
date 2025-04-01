@@ -262,3 +262,27 @@ input:focus, select:focus, textarea:focus {
   background: #1e2939 !important;
   border: none !important;
 }
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.animate-spin {
+  animation: spin 1.5s linear infinite;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animate-progress {
+  animation: progress 2s ease-in-out infinite;
+}
