@@ -30,8 +30,8 @@ const MobileNav = () => {
                 : 'text-muted-foreground'
             }`}
           >
-            <item.icon className="h-6 w-6" />
-            <span className="text-xs mt-1">{item.name}</span>
+            <item.icon className="h-4 w-4" />
+            <span className="text-[0.65rem] mt-1">{item.name}</span>
           </Link>
         ))}
       </div>

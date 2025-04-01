@@ -21,7 +21,7 @@ const BalanceCard = ({ data }: BalanceCardProps) => {
     return <div className="text-red-500">Invalid data</div>;
   }
   return (
-    <div className="bg-gradient-to-br from-[#8942FE]/90 to-[#656EC2]/90 backdrop-blur-md border border-white/10 rounded-xl p-6 text-white shadow-lg flex justify-between">
+    <div className="bg-gradient-to-br from-[#8942FE]/90 to-[#656EC2]/90 backdrop-blur-md border border-white/10 rounded-xl p-2 md:p-6 text-white shadow-lg flex justify-between">
       <div className="flex flex-col justify-between">
         {/* Balance Display */}
         <div className="mb-6">
@@ -32,20 +32,20 @@ const BalanceCard = ({ data }: BalanceCardProps) => {
         {/* Income/Expense Row */}
         <div className="flex justify-between mb-8 gap-5">
           <div className="flex gap-2 items-center">
-            <div className="w-10 h-10 flex items-center justify-center bg-primary/70 dark:bg-primary/20 rounded-md">
+            <div className="w-8 md:w-10 h-8 md:h-10 flex items-center justify-center bg-primary/70 dark:bg-primary/20 rounded-md">
               <FiArrowUp className="w-5 h-5 text-green-500" />
             </div>
             <div>
-              <p className="text-lg font-semibold">${data.income.toLocaleString()}</p>
+              <p className="text-base md:text-lg font-semibold">${data.income.toLocaleString()}</p>
               <p className="text-xs opacity-80">Income</p>
             </div>
           </div>
           <div className="flex gap-2 items-center">
-            <div className="w-10 h-10 flex items-center justify-center bg-primary/70 dark:bg-primary/20 rounded-md">
+            <div className="w-8 md:w-10 h-8 md:h-10 flex items-center justify-center bg-primary/70 dark:bg-primary/20 rounded-md">
               <FiArrowDown className="w-5 h-8 text-red-500" />
             </div>
             <div className="">
-              <p className="text-lg font-semibold">${data.expenses.toLocaleString()}</p>
+              <p className="text-base md:text-lg font-semibold">${data.expenses.toLocaleString()}</p>
               <p className="text-xs opacity-80">Expense</p>
             </div>
           </div>
@@ -53,11 +53,11 @@ const BalanceCard = ({ data }: BalanceCardProps) => {
 
         {/* Action Buttons */}
         <div className="flex gap-3">
-          <button  onClick={() => dispatch(toggleSendModal())} className=" text-nowrap flex-1 flex items-center justify-center gap-2 bg-white/80 text-primary dark:text-white dark:bg-white/10 hover:bg-white/20 backdrop-blur-sm py-2 px-4 rounded-lg transition-all">
+          <button  onClick={() => dispatch(toggleSendModal())} className="text-sm md:text-base  text-nowrap flex-1 flex items-center justify-center gap-2 bg-white/80 text-primary dark:text-white dark:bg-white/10 hover:bg-white/20 backdrop-blur-sm py-2 px-4 rounded-lg transition-all">
             <FiArrowUpRight className="w-4 h-4" />
             <span>Send Funds</span>
           </button>
-          <button  onClick={() => dispatch(toggleReceiveModal())} className="flex-1 flex items-center justify-center gap-2 bg-white/80 text-primary dark:text-white dark:bg-white/10 hover:bg-white/20 backdrop-blur-sm py-2 px-4 rounded-lg transition-all">
+          <button  onClick={() => dispatch(toggleReceiveModal())} className="text-sm md:text-base flex-1 flex items-center justify-center gap-2 bg-white/80 text-primary dark:text-white dark:bg-white/10 hover:bg-white/20 backdrop-blur-sm py-2 px-4 rounded-lg transition-all">
             <FiArrowDownLeft className="w-4 h-4" />
             <span>Receive</span>
           </button>
