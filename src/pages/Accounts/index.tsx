@@ -53,7 +53,7 @@ const Accounts = () => {
       {/* Accounts Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         {accounts.map(account => (
-          <div key={account.id} className="bg-accent rounded-xl  border border-border hover:shadow-sm transition-shadow overflow-hidden">
+          <div key={account.id} className="bg-card rounded-xl  border border-border hover:shadow-sm transition-shadow overflow-hidden">
             <div className="p-6">
               <div className="flex justify-between items-start mb-4">
                 <div>
@@ -91,7 +91,7 @@ const Accounts = () => {
       </div>
 
       {/* Recent Transactions Section */}
-      <div className="bg-accent rounded-xl overflow-hidden">
+      <div className="bg-card rounded-xl overflow-hidden">
         <div className="p-6 border-b border-border">
           <h2 className="text-xl font-semibold text-gray-800">Recent Transactions</h2>
         </div>

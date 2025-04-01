@@ -112,7 +112,7 @@ const Transactions = () => {
             <input
               type="text"
               placeholder="Search transactions..."
-              className="pl-10 pr-4 py-2 border border-slate-400 text-slate-800 dark:text-slate-100 placeholder:text-slate-500 dark:border-slate-700 rounded-lg w-full dark:bg-slate-800 focus:outline-none focus:ring-[1px] focus:ring-slate-600"
+              className="pl-10 pr-4 py-2 border border-slate-400 text-slate-800 dark:text-slate-100 placeholder:text-slate-500 dark:border-slate-700 rounded-lg w-full bg-card focus:outline-none focus:ring-[1px] focus:ring-slate-600"
               value={filters.search}
               onChange={(e) => setFilters({...filters, search: e.target.value})}
             />
@@ -120,7 +120,7 @@ const Transactions = () => {
           </div>
           
           <select 
-            className="border border-slate-400 text-slate-800 dark:text-slate-100 placeholder:text-slate-500 dark:border-slate-700 rounded-lg px-3 py-2 dark:bg-slate-800"
+            className="border border-slate-400 text-slate-800 dark:text-slate-100 placeholder:text-slate-500 dark:border-slate-700 rounded-lg px-3 py-2 bg-card"
             value={filters.dateRange}
             onChange={(e) => setFilters({...filters, dateRange: e.target.value})}
           >

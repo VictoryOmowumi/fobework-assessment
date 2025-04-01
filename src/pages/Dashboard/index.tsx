@@ -78,14 +78,14 @@ const Dashboard = () => {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+      <div className="flex flex-col md:flex-row justify-between items-start  gap-4">
         <div className="flex flex-col gap-1">
-          <h1 className="text-xl md:text-2xl font-bold text-foreground">{greeting}, {user}</h1>
+          <h1 className="text-xl md:text-2xl font-bold text-foreground text-wrap md:text-nowrap">{greeting}, {user}</h1>
           <p className="text-sm text-muted-foreground">
-            Welcome back to your dashboard. Let's dive into your finances.
+          Let's dive into your finances.
           </p>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center justify-between md:justify-end w-full gap-3">
           <span className="text-sm text-muted-foreground">Last updated: Today</span>
           <button onClick={refresh} className="px-3 py-1.5 bg-primary text-primary-foreground rounded-md text-sm flex items-center gap-1">
             Refresh <FiRefreshCw className="w-3 h-3" />

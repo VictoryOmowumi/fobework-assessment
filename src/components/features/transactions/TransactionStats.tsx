@@ -119,7 +119,7 @@ const TransactionStats = ({ transactions }) => {
         },
         ticks: {
           color: '#6b7280',
-          callback: (value) => `₦${value / 1000}k`
+          callback: (value) => `$${value / 1000}k`
         }
       }
     }
@@ -136,13 +136,13 @@ const TransactionStats = ({ transactions }) => {
             <img src={logo} alt="Logo" className=" w-12 " /> 
           </div>
           <div className="mt-auto">
-            <p className="text-3xl font-bold">₦{currentBalance.toLocaleString()}</p>
-            <p className="text-purple-100 mt-2">Available: ₦{availableBalance.toLocaleString()}</p>
+            <p className="text-3xl font-bold">${currentBalance.toLocaleString()}</p>
+            <p className="text-purple-100 mt-2">Available: ${availableBalance.toLocaleString()}</p>
           </div>
         </div>
 
         {/* Transactions Summary Card */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow flex flex-col min-h-48">
+        <div className="bg-card p-6 rounded-lg shadow flex flex-col min-h-48">
           <h3 className="text-lg font-medium mb-4">Transactions Summary</h3>
           <div className="grid grid-cols-2 gap-4 mt-auto">
             <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">
@@ -150,14 +150,14 @@ const TransactionStats = ({ transactions }) => {
                 <FiTrendingUp className="mr-2" />
                 <span className="text-sm">Inflow</span>
               </div>
-              <p className="text-xl font-semibold mt-1">+₦{inflow.toLocaleString()}</p>
+              <p className="text-xl font-semibold mt-1">+${inflow.toLocaleString()}</p>
             </div>
             <div className="bg-red-50 dark:bg-red-900/20 p-3 rounded-lg">
               <div className="flex items-center text-red-600 dark:text-red-400">
                 <FiTrendingDown className="mr-2" />
                 <span className="text-sm">Outflow</span>
               </div>
-              <p className="text-xl font-semibold mt-1">-₦{outflow.toLocaleString()}</p>
+              <p className="text-xl font-semibold mt-1">-${outflow.toLocaleString()}</p>
             </div>
           </div>
           <div className="mt-4 pt-4 border-t border-gray-200 dark:border-slate-700">
@@ -169,7 +169,7 @@ const TransactionStats = ({ transactions }) => {
       </div>
 
       {/* Right Column - Chart Area */}
-      <div className="col-span-2 bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+      <div className="col-span-2 bg-card p-6 rounded-lg shadow">
         <div className="flex justify-between items-center mb-6">
           <h3 className="text-lg font-medium">Inflow vs Outflow</h3>
           <div className="flex space-x-2">

@@ -23,8 +23,8 @@ const Investments = () => {
     <div className="space-y-6">
       <h1 className="text-2xl font-bold mb-6">Investment Portfolio</h1>
       
-      <div className="grid gap-6 md:grid-cols-3 mb-8">
-        <div className="bg-accent rounded-lg shadow p-4 col-span-2">
+      <div className="grid gap-6 grid-cols-1  md:grid-cols-3 mb-8">
+        <div className="bg-card rounded-lg shadow p-4 col-span-2">
           <h2 className="font-semibold text-lg mb-4">Portfolio Allocation</h2>
           <div className="flex items-center justify-center h-48">
             {/* Placeholder for pie chart - would be replaced with actual chart component */}
@@ -67,7 +67,7 @@ const Investments = () => {
           </div>
         </div>
         
-        <div className="bg-accent rounded-lg shadow p-4">
+        <div className="bg-card rounded-lg shadow p-4">
           <h2 className="font-semibold text-lg mb-4">Portfolio Summary</h2>
           <div className="space-y-4">
             <div>
@@ -91,7 +91,7 @@ const Investments = () => {
         </div>
       </div>
       
-      <div className="bg-accent rounded-lg shadow overflow-hidden">
+      <div className="bg-card rounded-lg shadow overflow-hidden">
         <div className="p-4 border-b flex justify-between items-center">
           <h2 className="font-semibold text-lg">Your Investments</h2>
           <div className="flex space-x-2">
