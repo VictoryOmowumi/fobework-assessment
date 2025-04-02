@@ -103,7 +103,7 @@ const Dashboard = () => {
         </div>
       {/* Summary Cards */}
         <div className="lg:col-span-2 bg-card rounded-xl border border-border p-4">
-        <SummaryCards kpi={dashboardData ? dashboardData[0].kpi : {}} />
+        <SummaryCards kpi={dashboardData ? dashboardData[0].kpi : { netWorth: { value: 0, change: "0%", changeType: "neutral" }, investments: { value: 0, change: "0%", changeType: "neutral" }, savings: { value: 0, change: "0%", changeType: "neutral" }, monthlySpend: { value: 0, change: "0%", changeType: "neutral" } }} />
         </div>
       </div>
 
@@ -121,7 +121,7 @@ const Dashboard = () => {
 
         {/* Savings Goals */}
         <div className="lg:col-span-3 bg-card rounded-xl border border-border p-6">
-          <SavingsGoals goals= {dashboardData ? dashboardData[0].savingGoals : null} />
+          <SavingsGoals goals={dashboardData && dashboardData[0].savingGoals ? dashboardData[0].savingGoals : []} />
         </div>
       </div>
 

@@ -10,17 +10,60 @@ interface Transaction {
 }
 
 interface DashboardData {
-  balance: number;
-  income: number;
-  expense: number;
-  investments: number;
-  savings: number;
-  monthlySpend: number;
+  id: string;
+  balanceCard: {
+    balance: number;
+    income: number;
+    expenses: number;
+  };
+  kpi: {
+    netWorth: {
+      value: number;
+      change: string;
+      changeType: string;
+    };
+    investments: {
+      value: number;
+      change: string;
+      changeType: string;
+    };
+    savings: {
+      value: number;
+      change: string;
+      changeType: string;
+    };
+    monthlySpend: {
+      value: number;
+      change: string;
+      changeType: string;
+    };
+  };
+  portfolio: {
+    allocation: {
+      label: string;
+      value: number;
+      color: string;
+    }[];
+    trend: {
+      text: string;
+      change: string;
+      changeType: string;
+    };
+  };
+  savingGoals: {
+    id: string;
+    name: string;
+    progress: number;
+    saved: number;
+    target: number;
+    remaining: number;
+    deadline: string;
+  }[];
 }
 
 export const useTransactions = () => {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
-  const [dashboardData, setDashboardData] = useState<DashboardData | null>(null);
+  const [dashboardData, setDashboardData] = useState<DashboardData[] | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -35,7 +78,7 @@ export const useTransactions = () => {
         "https://67ebb966aa794fb3222b5f31.mockapi.io/api/v1/transactions"
       );
       
-      const dashboardResponse = await axios.get<DashboardData>(
+      const dashboardResponse = await axios.get<DashboardData[]>(
         "https://67ebb966aa794fb3222b5f31.mockapi.io/api/v1/dashboardData"
       );
    
