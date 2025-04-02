@@ -104,15 +104,15 @@ const Goals = () => {
                 {/* Stats Grid */}
                 <div className="grid grid-cols-3 gap-4 text-center mt-6">
                   <div className="p-2 bg-muted-foreground rounded-lg">
-                    <p className="text-sm text-gray-500">Remaining</p>
+                    <p className="text-sm text-gray-700">Remaining</p>
                     <p className="font-semibold">${remaining.toLocaleString()}</p>
                   </div>
                   <div className="p-2 bg-muted-foreground rounded-lg">
-                    <p className="text-sm text-gray-500">Deadline</p>
+                    <p className="text-sm text-gray-700">Deadline</p>
                     <p className="font-semibold">{goal.deadline}</p>
                   </div>
                   <div className="p-2 bg-muted-foreground rounded-lg">
-                    <p className="text-sm text-gray-500">Monthly</p>
+                    <p className="text-sm text-gray-700">Monthly</p>
                     <p className="font-semibold">${Math.round(monthlySaving).toLocaleString()}</p>
                   </div>
                 </div>

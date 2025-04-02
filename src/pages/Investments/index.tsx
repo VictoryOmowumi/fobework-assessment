@@ -52,7 +52,7 @@ const Investments = () => {
     <div className="space-y-6">
       <h1 className="text-2xl font-bold mb-6">Investment Portfolio</h1>
 
-      <div className="grid gap-6 grid-cols-1  md:grid-cols-3 mb-8">
+      <div className="grid  lg:gap-6 grid-cols-1  lg:grid-cols-3 mb-8">
         <div className="bg-card rounded-lg shadow p-6 col-span-2">
           <div className="flex flex-wrap justify-between items-center mb-6">
             <h2 className="text-xl font-semibold text-muted-foreground">
@@ -181,7 +181,7 @@ const Investments = () => {
           </div>
         </div>
 
-        <div className="bg-card shadow rounded-lg p-4">
+        <div className="bg-card shadow rounded-lg p-4 mt-4 lg:mt-0">
           <h2 className="font-semibold text-lg mb-4">Portfolio Summary</h2>
           <div className="space-y-4">
             <div>
@@ -209,8 +209,8 @@ const Investments = () => {
         </div>
       </div>
 
-      <div className="bg-card rounded-lg shadow overflow-hidden">
-        <div className="p-4 border-b flex justify-between items-center">
+      <div className="bg-card rounded-lg shadow overflow-hidden mb-5 ">
+        <div className="p-4 border-b flex flex-col space-y-2 lg:flex-row justify-between lg:items-center">
           <h2 className="font-semibold text-lg">Your Investments</h2>
           <div className="flex space-x-2">
             <button className="px-3 py-1 text-sm bg-primary rounded hover:bg-primary text-accent">

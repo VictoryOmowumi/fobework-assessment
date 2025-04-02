@@ -78,8 +78,8 @@ const Accounts = () => {
             </div>
             
             {/* Account type specific footer */}
-            <div className={`${account.type === 'checking' ? 'bg-blue-50' : account.type === 'savings' ? 'bg-green-50' : 'bg-purple-50'} px-6 py-3`}>
-              <p className="text-xs text-muted-foreground">
+            <div className={`${account.type === 'checking' ? 'bg-blue-50' : account.type === 'savings' ? 'bg-green-50' : 'bg-purple-50'} text-neutral-800 px-6 py-3`}>
+              <p className="text-xs ">
                 {account.type === 'checking' ? 'Daily transactions available' :
                  account.type === 'savings' ? 'Earning 3.5% APY' :
                  'Market value updated daily'}

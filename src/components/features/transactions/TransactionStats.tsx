@@ -161,7 +161,7 @@ const TransactionStats = ({
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 text-slate-800 dark:text-slate-200 print:hidden mb-6">
+    <div className="grid grid-cols-1 lg:grid-cols-3  lg:gap-4 text-slate-800 dark:text-slate-200 print:hidden mb-6">
       {/* Left Column - Balance and Summary Cards */}
       <div className="col-span-1 flex flex-col gap-4 h-full">
         {/* Current Balance Card */}
@@ -189,7 +189,7 @@ const TransactionStats = ({
                 <FiTrendingUp className="mr-2" />
                 <span className="text-sm">Inflow</span>
               </div>
-              <p className="text-xl font-semibold mt-1">
+              <p className="text-base md:text-xl font-semibold mt-1">
                 +${inflow.toLocaleString()}
               </p>
             </div>
@@ -198,7 +198,7 @@ const TransactionStats = ({
                 <FiTrendingDown className="mr-2" />
                 <span className="text-sm">Outflow</span>
               </div>
-              <p className="text-xl font-semibold mt-1">
+              <p className="text-base md:text-xl font-semibold mt-1">
                 -${outflow.toLocaleString()}
               </p>
             </div>
@@ -213,7 +213,7 @@ const TransactionStats = ({
       </div>
 
       {/* Right Column - Chart Area */}
-      <div className="col-span-2 bg-card p-6 rounded-lg shadow">
+      <div className="col-span-2 bg-card p-2 md:p-6 rounded-lg shadow mt-4 lg:mt-0">
         <div className="flex justify-between items-center mb-6">
           <h3 className="text-lg font-medium">Inflow vs Outflow</h3>
           <div className="flex space-x-2">
@@ -237,7 +237,7 @@ const TransactionStats = ({
         </div>
 
         {/* Status Indicators */}
-        <div className="grid grid-cols-3 gap-4 mt-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
           <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">
             <p className="text-sm text-green-600 dark:text-green-400">
               Successful

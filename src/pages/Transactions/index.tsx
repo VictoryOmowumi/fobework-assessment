@@ -8,7 +8,7 @@ const Transactions = () => {
   const [loading, setLoading] = useState(false);
   const [filters, setFilters] = useState({
     status: '',
-    dateRange: 'this-month',
+    dateRange: 'all',
     category: '',
     search: ''
   });
@@ -105,7 +105,7 @@ const Transactions = () => {
   return (
     <div className="space-y-6">
       {/* Header with Filters */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
         <div>
           <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100">
             Transactions

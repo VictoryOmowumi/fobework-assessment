@@ -9,6 +9,7 @@ import { useTransactions } from '../../services/transactionApi/api';
 import { Skeleton } from '../../components/ui/skeleton';
 import SendModal from '../../components/features/modals/SendModal';
 import ReceiveModal from '../../components/features/modals/ReceiveModal';
+import Error from '../../components/layout/Error';
 const Dashboard = () => {
   const user = "Ayinla Abdulazeez";
   const { dashboardData, loading, error, refresh } = useTransactions();
@@ -71,7 +72,9 @@ const Dashboard = () => {
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return (
+      <Error message={error} refresh={refresh} />
+    );
   }
 
 
